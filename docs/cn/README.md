@@ -1,4 +1,4 @@
-# 🚀 JunXue-tech 个人主页项目
+# 🚀 Yihuan-qaq 个人主页项目
 
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-success)
 
@@ -7,11 +7,9 @@
 ## 📁 项目目录结构
 ```
 .
-├── CNAME            # 自定义域名配置
 ├── _data/           # 数据文件
 ├── _includes/       # HTML片段组件
 ├── _layouts/        # 页面布局模板
-├── _pages/          # 内容页面
 ├── _sass/           # SCSS样式文件
 ├── assets/          # 静态资源
 │   └── js/vendor/   # 第三方库（含jQuery）

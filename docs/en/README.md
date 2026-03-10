@@ -1,4 +1,4 @@
-# 🚀 JunXue-tech Personal Homepage Project
+# 🚀 Yihuan-qaq Personal Homepage Project
 
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-success)
 
@@ -7,11 +7,9 @@
 ## 📁 Project Structure
 ```
 .
-├── CNAME            # Custom domain
 ├── _data/           # Data files
 ├── _includes/       # HTML snippets
 ├── _layouts/        # Layout templates
-├── _pages/          # Sub pages
 ├── _sass/           # SCSS files
 ├── assets/          # Static assets
 │   └── js/vendor/   # Third-party libraries
