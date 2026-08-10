@@ -132,7 +132,8 @@ title: Homepage
               {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
             </div>
           </div>
-          <div class="pub-authors">{{ p.authors }}</div>
+          {% assign authors_html = p.authors | replace: "Y. Huang", '<span class="me">Y. Huang</span>' | replace: "黄逸焕", '<span class="me">黄逸焕</span>' %}
+          <div class="pub-authors">{{ authors_html }}</div>
           <div class="pub-meta">
             <span class="pub-venue">{{ p.venue }}</span>
             <span class="pub-year">{{ p.year }}</span>
