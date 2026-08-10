@@ -1,0 +1,47 @@
+# Yihuan Huang — Academic Homepage
+# Site configuration for GitHub Pages (Jekyll)
+
+# Basic
+title: "Yihuan Huang"
+tagline: "PhD candidate · Multimedia Security"
+description: "Personal academic homepage and research blog of Yihuan Huang (黄逸焕), PhD candidate at Wuhan University. Multimedia security: speech deepfake detection, adversarial robustness, and audio-visual forensics."
+lang: "zh-CN"
+
+url: "https://yihuan-qaq.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter_opts:
+    disable: true
+highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from processing
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - "*.rb"
+  - "*.gemspec"
+  - "vendor"
+  - ".github"

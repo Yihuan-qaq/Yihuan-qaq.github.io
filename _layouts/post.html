@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<main id="top">
+  <article class="post-page">
+    <div class="container" style="max-width:720px">
+      <header class="post-header">
+        <div class="meta">{{ page.date | date: "%Y-%m-%d" }}</div>
+        <h1 class="display" style="font-size:clamp(1.8rem,4vw,2.6rem)">{{ page.title }}</h1>
+        {% if page.categories %}
+        <div class="pub-tags" style="margin-top:.6rem">
+          {% for cat in page.categories %}<span class="pub-tag">{{ cat }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </header>
+      <div class="post-body">
+        {{ content }}
+      </div>
+      <div style="margin-top:2.5rem">
+        <a class="footer-up" href="{{ '/' | relative_url }}">← Back to homepage</a>
+      </div>
+    </div>
+  </article>
+</main>

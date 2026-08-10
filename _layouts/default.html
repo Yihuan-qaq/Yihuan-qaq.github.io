@@ -1,34 +1,81 @@
----
-layout: compress
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F5F0E6">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.title }}">
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
-  <body>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='10' fill='%238B3A2E'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23FAF7F0' font-family='Georgia'>黄</text></svg>">
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+  <!-- Fonts: Fraunces (display serif), Source Sans 3 (body), IBM Plex Mono (data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,620;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <div id="main" role="main">
-      {% include sidebar.html %}
-    
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-        <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
-            {{ content }}
-          </section>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="{{ '/' | relative_url }}">Yihuan<span class="dot">.</span>Huang</a>
+      <nav aria-label="Main">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">☰</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#research">Research</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#publications">Publications</a>
+          <a href="#news">News</a>
+          <a href="#blog">Blog</a>
         </div>
-      </article>
+      </nav>
     </div>
+  </header>
 
-    {% include scripts.html %}
+  {{ content }}
 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="meta">
+        © <span id="year">2026</span> Yihuan Huang (黄逸焕) · School of Cyber Science and Engineering, WHU
+      </div>
+      <div class="meta">
+        Built with <span class="heart">♥</span> as a static site · <span>Multimedia Security</span>
+      </div>
+      <a class="footer-up" href="#top">↑ Back to top</a>
+    </div>
+  </footer>
 
-  </body>
+  <script>
+    // Nav toggle
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+      });
+    }
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Scroll reveal
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('in'); });
+    }
+  </script>
+</body>
 </html>

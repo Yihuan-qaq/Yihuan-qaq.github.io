@@ -1,0 +1,49 @@
+# 时间轴 —— 学术轨迹
+# 每项: date(显示日期), label(可选徽标,如 Accepted / 奖项), text(中文), text_en(可选英文)
+
+items:
+  - date: "2018 – 2022"
+    text: "本科 · 武汉大学网络空间安全学院 (B.Eng.)"
+    text_en: "B.Eng., School of Cyber Science and Engineering, WHU"
+
+  - date: "2022 – 2024"
+    text: "硕士 · 武汉大学网络空间安全学院 (M.Eng.)"
+    text_en: "M.Eng., School of Cyber Science and Engineering, WHU"
+
+  - date: "2023.11"
+    label: "Paper"
+    text: "<strong>AFPM</strong> 被 <strong>IEEE TIFS</strong> 接收 —— 面向声纹识别的低开销通用对抗防御"
+    text_en: "<strong>AFPM</strong> accepted at <strong>IEEE TIFS</strong> — a low-cost, universal adversarial defense."
+
+  - date: "2024 – 今"
+    text: "博士 · 武汉大学网络空间安全学院 (Ph.D.)"
+    text_en: "Ph.D., School of Cyber Science and Engineering, WHU"
+
+  - date: "2025.03"
+    label: "Paper"
+    text: "<strong>FreqSense</strong> 被 <strong>ICASSP 2025</strong> 接收 —— 频率域可解释的对抗样本检测 (一作)"
+    text_en: "<strong>FreqSense</strong> accepted at <strong>ICASSP 2025</strong> — interpretable adversarial detection (first author)."
+
+  - date: "2025.05"
+    label: "Paper"
+    text: "<strong>APFT</strong> 被 <strong>IEEE TIFS</strong> 接收 —— 实时抗压缩语音对抗样本 (一作)"
+    text_en: "<strong>APFT</strong> accepted at <strong>IEEE TIFS</strong> — real-time anti-compression adversarial examples (first author)."
+
+  - date: "2025"
+    label: "Award"
+    text: "国家奖学金 · 雷军奖学金 · 武汉大学优秀研究生"
+    text_en: "National Scholarship · Lei Jun Scholarship · Outstanding Graduate Student of WHU"
+
+  - date: "2026"
+    label: "Papers"
+    text: "多篇论文被 <strong>CVPR</strong>、<strong>IJCAI</strong>、<strong>ACL</strong>、<strong>Interspeech</strong>、<strong>ICME</strong>、<strong>IEEE TIFS</strong> 接收"
+    text_en: "Multiple papers accepted at <strong>CVPR</strong>, <strong>IJCAI</strong>, <strong>ACL</strong>, <strong>Interspeech</strong>, <strong>ICME</strong>, <strong>IEEE TIFS</strong>"
+
+  - date: "2026.06 – 今"
+    text: "风控 · 结构化数据融合大模型研究实习生(筋斗云人才计划)"
+    text_en: "Research intern, risk-control — structured-data + LLM fusion (Jindouyun program)"
+
+  - date: "2026.08"
+    label: "Now"
+    text: "持续在做语音深度伪造检测与音视频取证,欢迎交流与合作"
+    text_en: "Ongoing work on speech deepfake detection & audio-visual forensics — always open to collaboration."

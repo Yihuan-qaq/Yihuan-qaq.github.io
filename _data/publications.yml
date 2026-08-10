@@ -1,0 +1,203 @@
+# 论文数据 —— 按研究方向分类
+# type: journal | conference | preprint | chinese-journal
+# role: first-author | co-author
+# 链接使用已知真实来源;无法确认 arXiv/官方页的论文链接到 Google Scholar 档案。
+
+categories:
+  - id: speech-deepfake
+    name_en: Speech Deepfake Detection
+    name_zh: 语音深度伪造检测
+    icon: wave
+    tagline_en: "Can we trust what we hear?"
+    tagline_zh: "我们听到的,还能信吗?"
+    blurb_en: >
+      Detecting AI-generated and spoofed speech across real-world channels —
+      real-time communication, speaker-specific fingerprints, and generalisation gaps.
+    blurb_zh: >
+      检测真实信道中的 AI 合成与伪造语音——实时通信、说话人特异性指纹与泛化鸿沟。
+    papers:
+      - title: "RTCFake: Speech Deepfake Detection in Real-Time Communication"
+        authors: "J. Xue, Z. Yi, Y. Huang, Y. Ren, Y. Chen, C. Fan, Z. Su, Y. Zhang, B. Cai"
+        venue: "Findings of ACL"
+        year: 2026
+        type: conference
+        role: co-author
+        tags: [real-time, dataset]
+        url: "https://arxiv.org/abs/2604.23742"
+        highlight: "Real-time communication is the hardest channel — RTCFake brings deepfake detection into it."
+
+      - title: "Profiling the Voice: Speaker-Specific Phoneme Fingerprinting for Speech Deepfake Detection"
+        authors: "J. Xue, T. Zhang, Z. Yi, Y. Huang, Y. Chai, Y. Zhang, Y. Ren"
+        venue: "IJCAI 2026"
+        year: 2026
+        type: conference
+        role: co-author
+        tags: [fingerprinting, phoneme]
+        url: "https://arxiv.org/abs/2605.17737"
+        highlight: "Speaker-specific phoneme fingerprints make spoofing a voice much harder than matching it."
+
+      - title: "Time-Frequency Consistency Learning for Robust Speech Deepfake Detection"
+        authors: "J. Xue, Z. Yi, Y. Ren, Y. Huang, J. Xiong, Y. Chai, G. Feng, J. Liu, T. Zhang"
+        venue: "arXiv preprint"
+        year: 2026
+        type: preprint
+        role: co-author
+        tags: [time-frequency]
+        url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
+        highlight: "Enforcing time-frequency consistency as a robust cue that survives real-world compression."
+
+      - title: "How Well Do Current Speech Deepfake Detection Methods Generalize to the Real World?"
+        authors: "D. Li, J. Xue, Y. Ren, Z. Yi, Y. Huang, G. Feng, Y. Chai"
+        venue: "arXiv preprint"
+        year: 2026
+        type: preprint
+        role: co-author
+        tags: [generalisation]
+        url: "https://arxiv.org/abs/2603.05852"
+        highlight: "Benchmarking how far today's detectors travel from lab to the real world."
+
+  - id: adversarial
+    name_en: Adversarial & Privacy Protection
+    name_zh: 对抗与隐私保护
+    icon: shield
+    tagline_en: "Defending the voice, breaking the attacker."
+    tagline_zh: "守住声纹,击穿攻击。"
+    blurb_en: >
+      Adversarial examples and defenses for speaker recognition and voice
+      privacy — low-cost, universal, and real-time.
+    blurb_zh: >
+      面向声纹识别与语音隐私的对抗攻防——低开销、通用、实时。
+    papers:
+      - title: "UnVC: Protecting Your Voiceprint by Generative Adversarial Speech"
+        authors: "Z. Sun, Y. Huang, Y. Ren, Z. Wang, W. Liu"
+        venue: "IEEE TIFS"
+        year: 2026
+        type: journal
+        role: co-author
+        tags: [voiceprint, privacy]
+        url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
+        highlight: "Generative adversarial speech as a cloak for your voiceprint."
+
+      - title: "APFT: Adaptive Phoneme Filter Template to Generate Anti-Compression Speech Adversarial Example in Real-Time"
+        authors: "Y. Huang, Y. Ren, Z. Sun, L. Zhai, J. Wang, W. Liu"
+        venue: "IEEE TIFS"
+        year: 2025
+        type: journal
+        role: first-author
+        tags: [adversarial, real-time]
+        url: "https://ieeexplore.ieee.org/document/11014245/"
+        highlight: "Adversarial examples that survive audio compression in real time."
+
+      - title: "FreqSense: Universal and Low-Latency Adversarial Example Detection for Speaker Recognition with Interpretability in Frequency Domain"
+        authors: "Y. Huang, Y. Li, Y. Ren, W. Tu, Y. Yang"
+        venue: "ICASSP 2025"
+        year: 2025
+        type: conference
+        role: first-author
+        tags: [detection, frequency]
+        url: "https://ieeexplore.ieee.org/document/10888789/"
+        highlight: "Catching adversarial examples via interpretable frequency-domain cues."
+
+      - title: "AFPM: A Low-Cost and Universal Adversarial Defense for Speaker Recognition Systems"
+        authors: "Z. Sun, Y. Ren, Y. Huang, W. Liu, H. Zhu"
+        venue: "IEEE TIFS"
+        year: 2023
+        type: journal
+        role: co-author
+        tags: [defense, universal]
+        url: "https://ieeexplore.ieee.org/document/10376205/"
+        highlight: "A single defense that generalises across speaker-recognition attacks."
+
+  - id: multimodal
+    name_en: Multimodal & Audio-Visual Forensics
+    name_zh: 多模态与音视频取证
+    icon: scan
+    tagline_en: "Forgery hides in the seams between audio and video."
+    tagline_zh: "伪造藏在音画接缝处。"
+    blurb_en: >
+      Cross-modal forensics: talking-head synthesis, lip-sync, and the hidden
+      degradation of audio-visual models in the wild.
+    blurb_zh: >
+      跨模态取证:数字人合成、口型同步,以及音视频模型在真实世界的隐性退化。
+    papers:
+      - title: "When AVSR Meets Video Conferencing: Dataset, Degradation, and the Hidden Mechanism Behind Performance Collapse"
+        authors: "Y. Huang, J. Xue, J. Liu, D. Li, T. Zhang, Z. Yi, Y. Ren, K. Li"
+        venue: "CVPR 2026"
+        year: 2026
+        type: conference
+        role: first-author
+        tags: [avsr, video-conferencing]
+        url: "https://arxiv.org/abs/2603.22915"
+        highlight: "Why audio-visual speech recognition collapses on real video calls."
+
+      - title: "PASE: Phoneme-Aware Speech Encoder to Improve Lip Sync Accuracy for Talking Head Synthesis"
+        authors: "Y. Huang, J. Liu, Y. Ren, J. Xue, W. Liu, Z. Sun"
+        venue: "ICME 2026"
+        year: 2026
+        type: conference
+        role: first-author
+        tags: [lip-sync, talking-head]
+        url: "https://arxiv.org/abs/2504.05803"
+        highlight: "Phoneme-aware encoding makes lips and speech agree."
+
+      - title: "Wavelet Enhanced Lip Forgery Learning for Talking Face Generation Detection"
+        authors: "Y. Chai, J. Xue, Y. Ren, Y. Huang, J. Liu"
+        venue: "IEEE SPL"
+        year: 2026
+        type: journal
+        role: co-author
+        tags: [talking-face, detection]
+        url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
+        highlight: "Wavelet-domain cues expose synthetic talking faces."
+
+      - title: "Unifying Speech Editing Detection and Content Localization via Prior-Enhanced Audio LLMs"
+        authors: "J. Xue, Y. Chai, Y. Ren, J. He, Z. Tang, Z. Yi, Y. Huang, Y. Xie, Y. Chen"
+        venue: "arXiv preprint"
+        year: 2026
+        type: preprint
+        role: co-author
+        tags: [audio-llm, editing]
+        url: "https://arxiv.org/abs/2601.21463"
+        highlight: "Audio LLMs that not only detect speech edits but locate where they happen."
+
+      - title: "基于说话行为相关面部关键点的鲁棒伪造人脸检测方案"
+        authors: "黄逸焕, 彭荔, 任延珍, 王丽娜"
+        venue: "信息安全学报"
+        year: 2026
+        type: chinese-journal
+        role: first-author
+        tags: [facial-landmark, chinese]
+        url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
+        highlight: "一作中文期刊——基于说话行为面部关键点的鲁棒伪造人脸检测。"
+
+  - id: datasets
+    name_en: Datasets & Benchmarks
+    name_zh: 数据集与基准
+    icon: layers
+    tagline_en: "Because a detector is only as good as its test set."
+    tagline_zh: "检测器有多好,取决于测试集有多难。"
+    blurb_en: >
+      Building the datasets that make forensic models honest about
+      real-world performance.
+    blurb_zh: >
+      构建让取证模型诚实面对真实性能的数据集与基准。
+    papers:
+      - title: "EchoFake: A Replay-Aware Dataset for Practical Speech Deepfake Detection"
+        authors: "T. Zhang, Y. Huang, Y. Ren"
+        venue: "ICASSP 2026"
+        year: 2026
+        type: conference
+        role: co-author
+        tags: [replay, dataset]
+        url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
+        highlight: "Replay-aware data for the physical-world deepfake threat."
+
+      - title: "Exploring the Scale and Diversity of Speech Anti-spoofing Datasets: Experiments and Analysis"
+        authors: "Z. Yi, J. Xue, Y. Ren, Y. Huang, Y. Chai, D. Li, G. Feng, J. Liu"
+        venue: "Interspeech 2026"
+        year: 2026
+        type: conference
+        role: co-author
+        tags: [analysis, benchmark]
+        url: "https://arxiv.org/abs/2606.08038"
+        highlight: "How diverse must a spoofing dataset be before a detector generalises?"
