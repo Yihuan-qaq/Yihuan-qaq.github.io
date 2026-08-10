@@ -140,17 +140,17 @@ categories:
         url: "https://ieeexplore.ieee.org/document/10376205/"
         highlight: "A single defense that generalises across speaker-recognition attacks."
 
-  - id: multimodal
-    name_en: Multimodal & Audio-Visual Forensics
-    name_zh: 多模态与音视频取证
-    icon: scan
-    tagline_en: "Forgery hides in the seams between audio and video."
-    tagline_zh: "伪造藏在音画接缝处。"
+  - id: multimodal-research
+    name_en: Multimodal Research
+    name_zh: 多模态研究
+    icon: layers
+    tagline_en: "Making audio-visual models robust in the wild."
+    tagline_zh: "让音视频模型在真实世界保持鲁棒。"
     blurb_en: >
-      Cross-modal forensics: talking-head synthesis, lip-sync, and the hidden
-      degradation of audio-visual models in the wild.
+      Multi-modal learning across audio and video — lip-sync for talking
+      heads, and audio-visual speech recognition under real-world degradation.
     blurb_zh: >
-      跨模态取证:数字人合成、口型同步,以及音视频模型在真实世界的隐性退化。
+      音视频跨模态研究——口型同步数字人合成,以及真实世界退化下的音视频语音识别。
     papers:
       - title: "When AVSR Meets Video Conferencing: Dataset, Degradation, and the Hidden Mechanism Behind Performance Collapse"
         authors: "Y. Huang, J. Xue, J. Liu, D. Li, T. Zhang, Z. Yi, Y. Ren, K. Li"
@@ -172,6 +172,18 @@ categories:
         url: "https://arxiv.org/abs/2504.05803"
         highlight: "Phoneme-aware encoding makes lips and speech agree."
 
+  - id: audiovisual
+    name_en: Audio-Visual Forensics
+    name_zh: 音视频取证
+    icon: scan
+    tagline_en: "Forgery hides in the seams between audio and video."
+    tagline_zh: "伪造藏在音画接缝处。"
+    blurb_en: >
+      Cross-modal forensics for synthetic faces — wavelet-domain cues and
+      speaking-behaviour facial landmarks expose generated content.
+    blurb_zh: >
+      面向合成人脸的跨模态取证——小波域线索与说话行为面部关键点揭露伪造内容。
+    papers:
       - title: "Wavelet Enhanced Lip Forgery Learning for Talking Face Generation Detection"
         authors: "Y. Chai, J. Xue, Y. Ren, Y. Huang, J. Liu"
         venue: "IEEE SPL"

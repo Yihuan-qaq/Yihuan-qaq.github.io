@@ -70,8 +70,8 @@ title: Homepage
     <div class="container">
       <h2 class="section-title"><span class="num">/01</span> News &amp; Highlights <span class="cn">动态</span></h2>
 
-      <div class="scroll-cards">
-        <div class="scroll-card">
+      <div class="news-pinwheel">
+        <div class="scroll-card news-main">
           <h3 class="scroll-card-title">News · 新闻</h3>
           <div class="scroll-card-body">
             {% for item in site.data.news.items %}
@@ -80,21 +80,23 @@ title: Homepage
           </div>
         </div>
 
-        <div class="scroll-card">
-          <h3 class="scroll-card-title">Honors &amp; Awards · 荣誉</h3>
-          <div class="scroll-card-body">
-            {% for item in site.data.honors.items %}
-            <div class="list-item"><span class="when">{{ item.date }}</span><span class="what">{{ item.text }}</span></div>
-            {% endfor %}
+        <div class="news-stack">
+          <div class="scroll-card">
+            <h3 class="scroll-card-title">Honors &amp; Awards · 荣誉</h3>
+            <div class="scroll-card-body">
+              {% for item in site.data.honors.items %}
+              <div class="list-item"><span class="when">{{ item.date }}</span><span class="what">{{ item.text }}</span></div>
+              {% endfor %}
+            </div>
           </div>
-        </div>
 
-        <div class="scroll-card">
-          <h3 class="scroll-card-title">Experience · 经历</h3>
-          <div class="scroll-card-body">
-            {% for item in site.data.experience.items %}
-            <div class="list-item"><span class="when">{{ item.date }}</span><span class="what">{{ item.text }}</span></div>
-            {% endfor %}
+          <div class="scroll-card">
+            <h3 class="scroll-card-title">Experience · 经历</h3>
+            <div class="scroll-card-body">
+              {% for item in site.data.experience.items %}
+              <div class="list-item"><span class="when">{{ item.date }}</span><span class="what">{{ item.text }}</span></div>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
