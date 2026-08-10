@@ -32,7 +32,7 @@ title: Homepage
         </div>
       </aside>
 
-      <!-- Statement -->
+      <!-- Statement + Research directions -->
       <div class="hero-statement">
         <span class="eyebrow">Research dossier · {{ site.time | date: "%Y" }}</span>
         <h1 class="display">I study how to tell<br><em style="font-style: italic; color: var(--rust);">synthetic</em> from real.</h1>
@@ -44,9 +44,20 @@ title: Homepage
         </p>
         <span class="stamp-line">Multimedia Security</span>
 
-        <div class="hero-research">
+        <div class="hero-research research-grid">
           {% for c in site.data.publications.categories %}
-          <a class="chip" href="#{{ c.id }}">{{ c.name_en }}</a>
+          {% assign n = c.papers | size %}
+          <div class="research-line" id="{{ c.id }}">
+            <div class="rl-top">
+              {% include icon.html icon=c.icon %}
+              <h3>{{ c.name_en }} <span class="rl-cn">{{ c.name_zh }}</span></h3>
+            </div>
+            <p class="rl-blurb">{{ c.blurb_en }}</p>
+            <p class="rl-blurb" lang="zh">{{ c.blurb_zh }}</p>
+            <div class="rl-links">
+              <a href="#publications-{{ c.id }}">See papers {% include icon.html icon="arrow" %}</a>
+            </div>
+          </div>
           {% endfor %}
         </div>
       </div>
@@ -88,53 +99,10 @@ title: Homepage
     </div>
   </section>
 
-  <!-- ============ RESEARCH DIRECTIONS ============ -->
-  <section class="block" id="research">
-    <div class="container">
-      <h2 class="section-title"><span class="num">/02</span> Research Directions <span class="cn">研究方向</span></h2>
-
-      <div class="research-grid">
-      {% for c in site.data.publications.categories %}
-      {% assign n = c.papers | size %}
-      <div class="research-line reveal" id="{{ c.id }}">
-        <div class="rl-top">
-          {% include icon.html icon=c.icon %}
-          <h3>{{ c.name_en }} <span class="rl-cn">{{ c.name_zh }}</span></h3>
-        </div>
-        <p class="rl-blurb">{{ c.blurb_en }}</p>
-        <p class="rl-blurb" lang="zh">{{ c.blurb_zh }}</p>
-        <div class="rl-count">{{ n }} papers</div>
-        <div class="rl-links">
-          <a href="#publications-{{ c.id }}">See papers {% include icon.html icon="arrow" %}</a>
-        </div>
-      </div>
-      {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TIMELINE ============ -->
-  <section class="block" id="timeline">
-    <div class="container">
-      <h2 class="section-title"><span class="num">/03</span> Timeline <span class="cn">学术轨迹</span></h2>
-      <div class="timeline">
-        {% for item in site.data.timeline.items %}
-        {% assign is_now = false %}
-        {% if item.label == "Now" %}{% assign is_now = true %}{% endif %}
-        <div class="tl-item {% if is_now %}is-now{% endif %}">
-          <div class="tl-date">{{ item.date }}{% if item.label %}{% unless is_now %} <span class="tl-badge">{{ item.label }}</span>{% endunless %}{% endif %}</div>
-          <div class="tl-body">{{ item.text }}</div>
-          {% if item.text_en %}<div class="tl-body" lang="en" style="opacity:.82">{{ item.text_en }}</div>{% endif %}
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
   <!-- ============ PUBLICATIONS ============ -->
   <section class="block" id="publications">
     <div class="container">
-      <h2 class="section-title"><span class="num">/04</span> Publications <span class="cn">论文</span></h2>
+      <h2 class="section-title"><span class="num">/02</span> Publications <span class="cn">论文</span></h2>
       <p class="lede" style="color:var(--ink-soft);max-width:70ch;margin-bottom:1.6rem">
         Grouped by research direction. <strong style="color:var(--ink);text-decoration:underline;text-decoration-color:var(--rust);text-decoration-thickness:2px;">Underlined name</strong> marks me as author.
         Each paper is tagged with an evidence index — you can look up any of them on
@@ -187,10 +155,28 @@ title: Homepage
     </div>
   </section>
 
+  <!-- ============ TIMELINE (Education only) ============ -->
+  <section class="block" id="timeline">
+    <div class="container">
+      <h2 class="section-title"><span class="num">/03</span> Education <span class="cn">教育经历</span></h2>
+      <div class="timeline">
+        {% for item in site.data.timeline.items %}
+        {% assign is_now = false %}
+        {% if item.label == "Now" %}{% assign is_now = true %}{% endif %}
+        <div class="tl-item {% if is_now %}is-now{% endif %}">
+          <div class="tl-date">{{ item.date }}{% if item.label %}{% unless is_now %} <span class="tl-badge">{{ item.label }}</span>{% endunless %}{% endif %}</div>
+          <div class="tl-body">{{ item.text }}</div>
+          {% if item.text_en %}<div class="tl-body" lang="en" style="opacity:.82">{{ item.text_en }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <!-- ============ BLOG ============ -->
   <section class="block" id="blog">
     <div class="container">
-      <h2 class="section-title"><span class="num">/05</span> Notes from the Lab <span class="cn">实验手记</span></h2>
+      <h2 class="section-title"><span class="num">/04</span> Notes from the Lab <span class="cn">实验手记</span></h2>
       <p class="lede" style="color:var(--ink-soft);max-width:70ch;margin-bottom:1.2rem">
         A blog about deepfake detection, adversarial robustness, and the craft of working in multimedia security —
         written for anyone walking the same road. 这里记录研究中的思考与实验笔记。
