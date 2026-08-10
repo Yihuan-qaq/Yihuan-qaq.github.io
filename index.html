@@ -12,7 +12,7 @@ title: Homepage
       <!-- Portrait / ID card -->
       <aside class="portrait-card" aria-label="Profile">
         <span class="file-tab">Profile · 0001</span>
-        <img class="avatar" src="{{ '/images/hyh.JPG' | relative_url }}" alt="Portrait of Yihuan Huang" onerror="this.style.display='none'">
+        <img class="avatar" src="{{ '/images/avatar.jpg' | relative_url }}" alt="Portrait of Yihuan Huang" onerror="this.style.display='none'">
         <div class="name">Yihuan Huang</div>
         <div class="name-zh">黄逸焕</div>
         <div class="role">Ph.D. Candidate · Multimedia Security<br>School of Cyber Science and Engineering, WHU</div>
@@ -70,29 +70,31 @@ title: Homepage
     <div class="container">
       <h2 class="section-title"><span class="num">/01</span> News &amp; Highlights <span class="cn">动态</span></h2>
 
-      <div class="grid-2">
-        <div class="list-card">
-          <h3 style="font-size:1.1rem;margin-bottom:.6rem">News · 新闻</h3>
-          <div class="list-item"><span class="when">2026.06</span><span class="what"><strong>IEEE TIFS</strong> 接收:<a href="#" rel="noopener">UnVC: Protecting Your Voiceprint by Generative Adversarial Speech</a></span></div>
-          <div class="list-item"><span class="when">2026.06</span><span class="what"><strong>Interspeech 2026</strong> 接收:<a href="https://arxiv.org/abs/2606.08038" target="_blank" rel="noopener">Exploring the Scale and Diversity of Speech Anti-spoofing Datasets</a></span></div>
-          <div class="list-item"><span class="when">2026.05</span><span class="what"><strong>IJCAI 2026</strong> 接收:<a href="https://arxiv.org/abs/2605.17737" target="_blank" rel="noopener">Profiling the Voice: Speaker-Specific Phoneme Fingerprinting</a></span></div>
-          <div class="list-item"><span class="when">2026.04</span><span class="what"><strong>ACL 2026</strong> 接收:<a href="https://arxiv.org/abs/2604.23742" target="_blank" rel="noopener">RTCFake: Speech Deepfake Detection in Real-Time Communication</a></span></div>
-          <div class="list-item"><span class="when">2026.02</span><span class="what"><strong>CVPR 2026</strong> 接收:<a href="https://arxiv.org/abs/2603.22915" target="_blank" rel="noopener">When AVSR Meets Video Conferencing</a>(一作)</span></div>
-          <div class="list-item"><span class="when">2025</span><span class="what">获 <strong>国家奖学金</strong> · <strong>雷军奖学金</strong> · 武汉大学优秀研究生</span></div>
+      <div class="scroll-cards">
+        <div class="scroll-card">
+          <h3 class="scroll-card-title">News · 新闻</h3>
+          <div class="scroll-card-body">
+            {% for item in site.data.news.items %}
+            <div class="list-item"><span class="when">{{ item.date }}</span><span class="what">{{ item.text }}</span></div>
+            {% endfor %}
+          </div>
         </div>
 
-        <div>
-          <div class="list-card" style="margin-bottom:1.2rem">
-            <h3 style="font-size:1.1rem;margin-bottom:.6rem">Honors &amp; Awards · 荣誉</h3>
-            <div class="list-item"><span class="when">2025</span><span class="what">国家奖学金 National Scholarship</span></div>
-            <div class="list-item"><span class="when">2025</span><span class="what">雷军奖学金 Lei Jun Scholarship</span></div>
-            <div class="list-item"><span class="when">2025</span><span class="what">武汉大学优秀研究生 Outstanding Graduate Student</span></div>
+        <div class="scroll-card">
+          <h3 class="scroll-card-title">Honors &amp; Awards · 荣誉</h3>
+          <div class="scroll-card-body">
+            {% for item in site.data.honors.items %}
+            <div class="list-item"><span class="when">{{ item.date }}</span><span class="what">{{ item.text }}</span></div>
+            {% endfor %}
           </div>
+        </div>
 
-          <div class="list-card">
-            <h3 style="font-size:1.1rem;margin-bottom:.6rem">Experience · 经历</h3>
-            <div class="list-item"><span class="when">2026.06 – now</span><span class="what">结构化数据融合大模型研究实习生 · 风控 · 筋斗云人才计划(27届)</span></div>
-            <div class="list-item"><span class="when">Reviewer</span><span class="what">IEEE TIFS · IEEE/ACM TASLP · ICME 2026 · ICML 2026</span></div>
+        <div class="scroll-card">
+          <h3 class="scroll-card-title">Experience · 经历</h3>
+          <div class="scroll-card-body">
+            {% for item in site.data.experience.items %}
+            <div class="list-item"><span class="when">{{ item.date }}</span><span class="what">{{ item.text }}</span></div>
+            {% endfor %}
           </div>
         </div>
       </div>

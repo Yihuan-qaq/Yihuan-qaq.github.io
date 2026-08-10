@@ -1,0 +1,37 @@
+# 新闻/动态 —— 论文接收与预发布时间
+# 按时间倒序排列(最新在前)。每条: date(YYYY.MM), text(内容,可用 <strong>/<a>)
+# 来源: 论文发表/接收记录
+
+items:
+  - date: "2026.06"
+    text: "<strong>IEEE TIFS</strong> 接收:<a href=\"https://scholar.google.com/citations?user=CRmELlsAAAAJ\">UnVC: Protecting Your Voiceprint by Generative Adversarial Speech</a>"
+
+  - date: "2026.06"
+    text: "<strong>Interspeech 2026</strong> 接收:<a href=\"https://arxiv.org/abs/2606.08038\">Exploring the Scale and Diversity of Speech Anti-spoofing Datasets</a>"
+
+  - date: "2026.05"
+    text: "<strong>IJCAI 2026</strong> 接收:<a href=\"https://arxiv.org/abs/2605.17737\">Profiling the Voice: Speaker-Specific Phoneme Fingerprinting for Speech Deepfake Detection</a>"
+
+  - date: "2026.04"
+    text: "<strong>ACL 2026</strong> 接收:<a href=\"https://arxiv.org/abs/2604.23742\">RTCFake: Speech Deepfake Detection in Real-Time Communication</a>"
+
+  - date: "2026.03"
+    text: "<strong>ICME 2026</strong> 接收:<a href=\"https://arxiv.org/abs/2504.05803\">PASE: Phoneme-Aware Speech Encoder to Improve Lip Sync Accuracy for Talking Head Synthesis</a>(一作)"
+
+  - date: "2026.03"
+    text: "<strong>ICME 2026</strong> 接收:DEFT: Deformation-Guided Efficient Fusion for Real-Time Deepfake Detection"
+
+  - date: "2026.02"
+    text: "<strong>CVPR 2026</strong> 接收:<a href=\"https://arxiv.org/abs/2603.22915\">When AVSR Meets Video Conferencing: Dataset, Degradation, and the Hidden Mechanism Behind Performance Collapse</a>(一作)"
+
+  - date: "2026.01"
+    text: "预印本:<a href=\"https://arxiv.org/abs/2601.21463\">Unifying Speech Editing Detection and Content Localization via Prior-Enhanced Audio LLMs</a>"
+
+  - date: "2025.05"
+    text: "<strong>IEEE TIFS</strong> 接收:<a href=\"https://ieeexplore.ieee.org/document/11014245/\">APFT: Adaptive Phoneme Filter Template to Generate Anti-Compression Speech Adversarial Example in Real-Time</a>(一作)"
+
+  - date: "2025.03"
+    text: "<strong>ICASSP 2025</strong> 接收:<a href=\"https://ieeexplore.ieee.org/document/10888789/\">FreqSense: Universal and Low-Latency Adversarial Example Detection for Speaker Recognition</a>(一作)"
+
+  - date: "2023.11"
+    text: "<strong>IEEE TIFS</strong> 接收:<a href=\"https://ieeexplore.ieee.org/document/10376205/\">AFPM: A Low-Cost and Universal Adversarial Defense for Speaker Recognition Systems</a>"

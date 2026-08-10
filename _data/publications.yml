@@ -12,9 +12,11 @@ categories:
     tagline_zh: "我们听到的,还能信吗?"
     blurb_en: >
       Detecting AI-generated and spoofed speech across real-world channels —
-      real-time communication, speaker-specific fingerprints, and generalisation gaps.
+      real-time communication, speaker-specific fingerprints, editing
+      localization, and generalisation gaps.
     blurb_zh: >
-      检测真实信道中的 AI 合成与伪造语音——实时通信、说话人特异性指纹与泛化鸿沟。
+      检测真实信道中的 AI 合成与伪造语音——实时通信、说话人特异性指纹、
+      语音编辑定位与泛化鸿沟。
     papers:
       - title: "RTCFake: Speech Deepfake Detection in Real-Time Communication"
         authors: "J. Xue, Z. Yi, Y. Huang, Y. Ren, Y. Chen, C. Fan, Z. Su, Y. Zhang, B. Cai"
@@ -55,6 +57,36 @@ categories:
         tags: [generalisation]
         url: "https://arxiv.org/abs/2603.05852"
         highlight: "Benchmarking how far today's detectors travel from lab to the real world."
+
+      - title: "EchoFake: A Replay-Aware Dataset for Practical Speech Deepfake Detection"
+        authors: "T. Zhang, Y. Huang, Y. Ren"
+        venue: "ICASSP 2026"
+        year: 2026
+        type: conference
+        role: co-author
+        tags: [replay, dataset]
+        url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
+        highlight: "Replay-aware data for the physical-world deepfake threat."
+
+      - title: "Exploring the Scale and Diversity of Speech Anti-spoofing Datasets: Experiments and Analysis"
+        authors: "Z. Yi, J. Xue, Y. Ren, Y. Huang, Y. Chai, D. Li, G. Feng, J. Liu"
+        venue: "Interspeech 2026"
+        year: 2026
+        type: conference
+        role: co-author
+        tags: [analysis, benchmark]
+        url: "https://arxiv.org/abs/2606.08038"
+        highlight: "How diverse must a spoofing dataset be before a detector generalises?"
+
+      - title: "Unifying Speech Editing Detection and Content Localization via Prior-Enhanced Audio LLMs"
+        authors: "J. Xue, Y. Chai, Y. Ren, J. He, Z. Tang, Z. Yi, Y. Huang, Y. Xie, Y. Chen"
+        venue: "arXiv preprint"
+        year: 2026
+        type: preprint
+        role: co-author
+        tags: [audio-llm, editing]
+        url: "https://arxiv.org/abs/2601.21463"
+        highlight: "Audio LLMs that not only detect speech edits but locate where they happen."
 
   - id: adversarial
     name_en: Adversarial & Privacy Protection
@@ -150,16 +182,6 @@ categories:
         url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
         highlight: "Wavelet-domain cues expose synthetic talking faces."
 
-      - title: "Unifying Speech Editing Detection and Content Localization via Prior-Enhanced Audio LLMs"
-        authors: "J. Xue, Y. Chai, Y. Ren, J. He, Z. Tang, Z. Yi, Y. Huang, Y. Xie, Y. Chen"
-        venue: "arXiv preprint"
-        year: 2026
-        type: preprint
-        role: co-author
-        tags: [audio-llm, editing]
-        url: "https://arxiv.org/abs/2601.21463"
-        highlight: "Audio LLMs that not only detect speech edits but locate where they happen."
-
       - title: "基于说话行为相关面部关键点的鲁棒伪造人脸检测方案"
         authors: "黄逸焕, 彭荔, 任延珍, 王丽娜"
         venue: "信息安全学报"
@@ -169,35 +191,3 @@ categories:
         tags: [facial-landmark, chinese]
         url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
         highlight: "一作中文期刊——基于说话行为面部关键点的鲁棒伪造人脸检测。"
-
-  - id: datasets
-    name_en: Datasets & Benchmarks
-    name_zh: 数据集与基准
-    icon: layers
-    tagline_en: "Because a detector is only as good as its test set."
-    tagline_zh: "检测器有多好,取决于测试集有多难。"
-    blurb_en: >
-      Building the datasets that make forensic models honest about
-      real-world performance.
-    blurb_zh: >
-      构建让取证模型诚实面对真实性能的数据集与基准。
-    papers:
-      - title: "EchoFake: A Replay-Aware Dataset for Practical Speech Deepfake Detection"
-        authors: "T. Zhang, Y. Huang, Y. Ren"
-        venue: "ICASSP 2026"
-        year: 2026
-        type: conference
-        role: co-author
-        tags: [replay, dataset]
-        url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
-        highlight: "Replay-aware data for the physical-world deepfake threat."
-
-      - title: "Exploring the Scale and Diversity of Speech Anti-spoofing Datasets: Experiments and Analysis"
-        authors: "Z. Yi, J. Xue, Y. Ren, Y. Huang, Y. Chai, D. Li, G. Feng, J. Liu"
-        venue: "Interspeech 2026"
-        year: 2026
-        type: conference
-        role: co-author
-        tags: [analysis, benchmark]
-        url: "https://arxiv.org/abs/2606.08038"
-        highlight: "How diverse must a spoofing dataset be before a detector generalises?"
