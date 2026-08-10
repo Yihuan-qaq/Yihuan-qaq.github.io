@@ -400,6 +400,26 @@ section.block { padding: 2.6rem 0 1rem; scroll-margin-top: 76px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .footer-inner .meta { color: var(--ink-faint); }
 .footer-inner .heart { color: var(--rust); }
+
+/* Visitor counter */
+.visitor-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  margin-top: 1.4rem;
+  flex-wrap: wrap;
+}
+.visitor-row img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.visitor-label {
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  color: var(--ink-faint);
+  letter-spacing: .03em;
+}
 .footer-up { font-family: var(--font-mono); font-size: .8rem; color: var(--indigo); text-decoration: none; }
 
 /* ---------- Motion ---------- */
