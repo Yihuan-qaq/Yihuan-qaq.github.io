@@ -143,6 +143,9 @@ title: Homepage
             {% if p.type == "chinese-journal" %}{% assign type_label = "中文期刊" %}{% endif %}
             <span class="pub-type">{{ type_label }}</span>
             {% if p.role == "first-author" %}<span class="role-badge">First author</span>{% endif %}
+            {% if p.role == "co-first-author" %}<span class="role-badge">Co-first author</span>{% endif %}
+            {% if p.presentation == "spotlight" %}<span class="pres-badge pres-spotlight">Spotlight</span>{% endif %}
+            {% if p.presentation == "poster" %}<span class="pres-badge pres-poster">Poster</span>{% endif %}
           </div>
           {% if p.highlight %}
           <div class="pub-highlight">{{ p.highlight }}</div>

@@ -24,6 +24,7 @@ categories:
         year: 2026
         type: conference
         role: co-author
+        presentation: poster
         tags: [real-time, dataset]
         url: "https://arxiv.org/abs/2604.23742"
         highlight: "Real-time communication is the hardest channel — RTCFake brings deepfake detection into it."
@@ -34,16 +35,18 @@ categories:
         year: 2026
         type: conference
         role: co-author
+        presentation: poster
         tags: [fingerprinting, phoneme]
         url: "https://arxiv.org/abs/2605.17737"
         highlight: "Speaker-specific phoneme fingerprints make spoofing a voice much harder than matching it."
 
       - title: "Time-Frequency Consistency Learning for Robust Speech Deepfake Detection"
         authors: "J. Xue, Z. Yi, Y. Ren, Y. Huang, J. Xiong, Y. Chai, G. Feng, J. Liu, T. Zhang"
-        venue: "arXiv preprint"
+        venue: "MM 2026"
         year: 2026
-        type: preprint
+        type: conference
         role: co-author
+        presentation: poster
         tags: [time-frequency]
         url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
         highlight: "Enforcing time-frequency consistency as a robust cue that survives real-world compression."
@@ -64,6 +67,7 @@ categories:
         year: 2026
         type: conference
         role: co-author
+        presentation: poster
         tags: [replay, dataset]
         url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
         highlight: "Replay-aware data for the physical-world deepfake threat."
@@ -74,6 +78,7 @@ categories:
         year: 2026
         type: conference
         role: co-author
+        presentation: poster
         tags: [analysis, benchmark]
         url: "https://arxiv.org/abs/2606.08038"
         highlight: "How diverse must a spoofing dataset be before a detector generalises?"
@@ -105,7 +110,7 @@ categories:
         venue: "IEEE TIFS"
         year: 2026
         type: journal
-        role: co-author
+        role: co-first-author
         tags: [voiceprint, privacy]
         url: "https://scholar.google.com/citations?user=CRmELlsAAAAJ"
         highlight: "Generative adversarial speech as a cloak for your voiceprint."
@@ -126,6 +131,7 @@ categories:
         year: 2025
         type: conference
         role: first-author
+        presentation: poster
         tags: [detection, frequency]
         url: "https://ieeexplore.ieee.org/document/10888789/"
         highlight: "Catching adversarial examples via interpretable frequency-domain cues."
@@ -158,6 +164,7 @@ categories:
         year: 2026
         type: conference
         role: first-author
+        presentation: poster
         tags: [avsr, video-conferencing]
         url: "https://arxiv.org/abs/2603.22915"
         highlight: "Why audio-visual speech recognition collapses on real video calls."
@@ -168,6 +175,7 @@ categories:
         year: 2026
         type: conference
         role: first-author
+        presentation: spotlight
         tags: [lip-sync, talking-head]
         url: "https://arxiv.org/abs/2504.05803"
         highlight: "Phoneme-aware encoding makes lips and speech agree."

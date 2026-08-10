@@ -307,6 +307,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; margin: 0;
   padding: .05em .3em; font-size: .9rem; color: var(--highlight-ink);
 }
 .role-badge { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--rust); border: 1px solid var(--rust); border-radius: 999px; padding: .04rem .5rem; }
+.pres-badge { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; border-radius: 999px; padding: .04rem .5rem; }
+.pres-spotlight { color: #7A5A00; background: var(--highlight); border: 1px solid #C9A900; }
+.pres-poster { color: var(--indigo); border: 1px solid color-mix(in srgb, var(--indigo) 45%, transparent); }
 
 /* ---------- News / lists ---------- */
 .list-card { background: var(--card); border: 1px solid var(--rule); border-radius: var(--r-md); padding: 1.2rem 1.5rem; box-shadow: var(--shadow-card); }
