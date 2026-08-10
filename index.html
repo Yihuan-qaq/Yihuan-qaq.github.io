@@ -54,105 +54,10 @@ title: Homepage
     </div>
   </section>
 
-  <!-- ============ RESEARCH DIRECTIONS ============ -->
-  <section class="block" id="research">
-    <div class="container">
-      <h2 class="section-title"><span class="num">/01</span> Research Directions <span class="cn">研究方向</span></h2>
-
-      {% for c in site.data.publications.categories %}
-      {% assign n = c.papers | size %}
-      <div class="research-line reveal" id="{{ c.id }}">
-        <div class="rl-top">
-          {% include icon.html icon=c.icon %}
-          <h3>{{ c.name_en }} <span class="rl-cn">{{ c.name_zh }}</span></h3>
-          <span class="rl-tag">{{ n }} papers</span>
-        </div>
-        <p class="rl-blurb">{{ c.blurb_en }}</p>
-        <p class="rl-blurb" lang="zh">{{ c.blurb_zh }}</p>
-        <div class="rl-links">
-          <a href="#publications-{{ c.id }}">See papers {% include icon.html icon="arrow" %}</a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-
-  <!-- ============ TIMELINE ============ -->
-  <section class="block" id="timeline">
-    <div class="container">
-      <h2 class="section-title"><span class="num">/02</span> Timeline <span class="cn">学术轨迹</span></h2>
-      <div class="timeline">
-        {% for item in site.data.timeline.items %}
-        {% assign is_now = false %}
-        {% if item.label == "Now" %}{% assign is_now = true %}{% endif %}
-        <div class="tl-item {% if is_now %}is-now{% endif %}">
-          <div class="tl-date">{{ item.date }}{% if item.label %}{% unless is_now %} <span class="tl-badge">{{ item.label }}</span>{% endunless %}{% endif %}</div>
-          <div class="tl-body">{{ item.text }}</div>
-          {% if item.text_en %}<div class="tl-body" lang="en" style="opacity:.82">{{ item.text_en }}</div>{% endif %}
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PUBLICATIONS ============ -->
-  <section class="block" id="publications">
-    <div class="container">
-      <h2 class="section-title"><span class="num">/03</span> Publications <span class="cn">论文</span></h2>
-      <p class="lede" style="color:var(--ink-soft);max-width:70ch;margin-bottom:1.6rem">
-        Grouped by research direction. <strong style="color:var(--ink);text-decoration:underline;text-decoration-color:var(--rust);text-decoration-thickness:2px;">Underlined name</strong> marks me as author.
-        Each paper is tagged with an evidence index — you can look up any of them on
-        <a href="https://scholar.google.com/citations?user=CRmELlsAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Google Scholar</a>.
-      </p>
-
-      {% assign idx = 1 %}
-      {% for c in site.data.publications.categories %}
-      <div class="pub-group" id="publications-{{ c.id }}">
-        <div class="pub-group-head">
-          <h3>{{ c.name_en }} <span style="font-size:.7em;color:var(--ink-faint);font-weight:400">{{ c.name_zh }}</span></h3>
-          <span class="pub-count">{{ c.papers | size }} papers</span>
-        </div>
-
-        {% assign sorted = c.papers | sort: 'year' | reverse %}
-        {% for p in sorted %}
-        {% assign idx_str = idx | prepend: '00' | slice: -2, 2 %}
-        <article class="pub-card reveal">
-          <span class="evidence-tag">EV-{{ idx_str }}</span>
-          {% assign idx = idx | plus: 1 %}
-          <div class="pub-title">
-            {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
-          </div>
-          <div class="pub-authors">{{ p.authors }}</div>
-          <div class="pub-meta">
-            <span class="pub-venue">{{ p.venue }}</span>
-            <span class="pub-year">{{ p.year }}</span>
-            {% assign type_label = "" %}
-            {% if p.type == "journal" %}{% assign type_label = "Journal" %}{% endif %}
-            {% if p.type == "conference" %}{% assign type_label = "Conference" %}{% endif %}
-            {% if p.type == "preprint" %}{% assign type_label = "Preprint" %}{% endif %}
-            {% if p.type == "chinese-journal" %}{% assign type_label = "中文期刊" %}{% endif %}
-            <span class="pub-type">{{ type_label }}</span>
-            {% if p.role == "first-author" %}<span class="role-badge">First author</span>{% endif %}
-          </div>
-          {% if p.highlight %}
-          <div class="pub-highlight">{{ p.highlight }}</div>
-          {% endif %}
-          {% if p.tags %}
-          <div class="pub-tags">
-            {% for t in p.tags %}<span class="pub-tag">{{ t }}</span>{% endfor %}
-          </div>
-          {% endif %}
-        </article>
-        {% endfor %}
-      </div>
-      {% endfor %}
-    </div>
-  </section>
-
   <!-- ============ NEWS / AWARDS / MISC ============ -->
   <section class="block" id="news">
     <div class="container">
-      <h2 class="section-title"><span class="num">/04</span> News &amp; Highlights <span class="cn">动态</span></h2>
+      <h2 class="section-title"><span class="num">/01</span> News &amp; Highlights <span class="cn">动态</span></h2>
 
       <div class="grid-2">
         <div class="list-card">
@@ -180,6 +85,105 @@ title: Homepage
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH DIRECTIONS ============ -->
+  <section class="block" id="research">
+    <div class="container">
+      <h2 class="section-title"><span class="num">/02</span> Research Directions <span class="cn">研究方向</span></h2>
+
+      <div class="research-grid">
+      {% for c in site.data.publications.categories %}
+      {% assign n = c.papers | size %}
+      <div class="research-line reveal" id="{{ c.id }}">
+        <div class="rl-top">
+          {% include icon.html icon=c.icon %}
+          <h3>{{ c.name_en }} <span class="rl-cn">{{ c.name_zh }}</span></h3>
+        </div>
+        <p class="rl-blurb">{{ c.blurb_en }}</p>
+        <p class="rl-blurb" lang="zh">{{ c.blurb_zh }}</p>
+        <div class="rl-count">{{ n }} papers</div>
+        <div class="rl-links">
+          <a href="#publications-{{ c.id }}">See papers {% include icon.html icon="arrow" %}</a>
+        </div>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="block" id="timeline">
+    <div class="container">
+      <h2 class="section-title"><span class="num">/03</span> Timeline <span class="cn">学术轨迹</span></h2>
+      <div class="timeline">
+        {% for item in site.data.timeline.items %}
+        {% assign is_now = false %}
+        {% if item.label == "Now" %}{% assign is_now = true %}{% endif %}
+        <div class="tl-item {% if is_now %}is-now{% endif %}">
+          <div class="tl-date">{{ item.date }}{% if item.label %}{% unless is_now %} <span class="tl-badge">{{ item.label }}</span>{% endunless %}{% endif %}</div>
+          <div class="tl-body">{{ item.text }}</div>
+          {% if item.text_en %}<div class="tl-body" lang="en" style="opacity:.82">{{ item.text_en }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
+  <section class="block" id="publications">
+    <div class="container">
+      <h2 class="section-title"><span class="num">/04</span> Publications <span class="cn">论文</span></h2>
+      <p class="lede" style="color:var(--ink-soft);max-width:70ch;margin-bottom:1.6rem">
+        Grouped by research direction. <strong style="color:var(--ink);text-decoration:underline;text-decoration-color:var(--rust);text-decoration-thickness:2px;">Underlined name</strong> marks me as author.
+        Each paper is tagged with an evidence index — you can look up any of them on
+        <a href="https://scholar.google.com/citations?user=CRmELlsAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Google Scholar</a>.
+      </p>
+
+      {% assign idx = 1 %}
+      {% for c in site.data.publications.categories %}
+      <div class="pub-group" id="publications-{{ c.id }}">
+        <div class="pub-group-head">
+          <h3>{{ c.name_en }} <span style="font-size:.7em;color:var(--ink-faint);font-weight:400">{{ c.name_zh }}</span></h3>
+          <span class="pub-count">{{ c.papers | size }} papers</span>
+        </div>
+
+        {% assign sorted = c.papers | sort: 'year' | reverse %}
+        {% for p in sorted %}
+        {% assign idx_str = idx | prepend: '00' | slice: -2, 2 %}
+        <article class="pub-card reveal">
+          {% assign idx = idx | plus: 1 %}
+          <div class="pub-title-row">
+            <span class="evidence-tag">EV-{{ idx_str }}</span>
+            <div class="pub-title">
+              {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+            </div>
+          </div>
+          <div class="pub-authors">{{ p.authors }}</div>
+          <div class="pub-meta">
+            <span class="pub-venue">{{ p.venue }}</span>
+            <span class="pub-year">{{ p.year }}</span>
+            {% assign type_label = "" %}
+            {% if p.type == "journal" %}{% assign type_label = "Journal" %}{% endif %}
+            {% if p.type == "conference" %}{% assign type_label = "Conference" %}{% endif %}
+            {% if p.type == "preprint" %}{% assign type_label = "Preprint" %}{% endif %}
+            {% if p.type == "chinese-journal" %}{% assign type_label = "中文期刊" %}{% endif %}
+            <span class="pub-type">{{ type_label }}</span>
+            {% if p.role == "first-author" %}<span class="role-badge">First author</span>{% endif %}
+          </div>
+          {% if p.highlight %}
+          <div class="pub-highlight">{{ p.highlight }}</div>
+          {% endif %}
+          {% if p.tags %}
+          <div class="pub-tags">
+            {% for t in p.tags %}<span class="pub-tag">{{ t }}</span>{% endfor %}
+          </div>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+      {% endfor %}
     </div>
   </section>
 
